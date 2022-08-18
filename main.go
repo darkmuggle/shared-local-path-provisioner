@@ -23,7 +23,7 @@ var (
 	FlagConfigFile                = "config"
 	FlagProvisionerName           = "provisioner-name"
 	EnvProvisionerName            = "PROVISIONER_NAME"
-	DefaultProvisionerName        = "rancher.io/local-path"
+	DefaultProvisionerName        = "muggle.dev/shared-local-path"
 	FlagNamespace                 = "namespace"
 	EnvNamespace                  = "POD_NAMESPACE"
 	DefaultNamespace              = "local-path-storage"
@@ -272,6 +272,7 @@ func startDaemon(c *cli.Context) error {
 		pvController.FailedDeleteThreshold(deletionRetryCount),
 		pvController.Threadiness(workerThreads),
 	)
+
 	logrus.Debug("Provisioner started")
 	pc.Run(stopCh)
 	logrus.Debug("Provisioner stopped")

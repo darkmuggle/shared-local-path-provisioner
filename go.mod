@@ -1,4 +1,4 @@
-module github.com/rancher/local-path-provisioner
+module github.com/darkmuggle/shared-local-path-provisioner
 
 go 1.16
 
