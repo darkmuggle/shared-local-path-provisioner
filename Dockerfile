@@ -8,3 +8,5 @@ RUN go clean \
  && rm -rf /src
 
 ENTRYPOINT ["/shared-local-path-provisioner"]
+
+LABEL org.opencontainers.image.source https://github.com/darkmuggle/shared-local-path-provisioner
